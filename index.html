@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Website Discovery</title>
+  <meta name="description" content="Client website discovery and project questionnaire.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- PDF engine (jsPDF). If it can't load (offline), the app falls back to Print / Save as PDF. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <header class="topbar">
+    <button type="button" class="brand" data-act="home" aria-label="Go to saved projects">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name" id="brandName">Digital Studio Co</span>
+      <span class="brand-sub">Discovery</span>
+    </button>
+    <nav class="topbar-right" id="topbarRight" aria-label="Main"></nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <!-- Filled only when printing -->
+  <div id="print-root"></div>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="padding:2rem">This app needs JavaScript enabled.</p></noscript>
+</body>
+</html>
